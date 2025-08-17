@@ -1,0 +1,58 @@
+﻿@model ProyColeccionLibros.Models.Libro
+
+@{
+    ViewBag.Title = "DetailsLibro";
+}
+
+<h2>DetailsLibro</h2>
+
+<div>
+    <h4>Libro</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdLibro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdLibro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreLibro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreLibro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaImpresion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaImpresion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EsNuevo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EsNuevo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Regresar", "IndexLibro")
+</p>

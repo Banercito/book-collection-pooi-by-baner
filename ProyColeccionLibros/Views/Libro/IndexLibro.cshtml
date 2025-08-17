@@ -1,0 +1,64 @@
+﻿@model IEnumerable<ProyColeccionLibros.Models.Libro>
+
+@{
+    ViewBag.Title = "IndexLibro";
+}
+
+<h2>IndexLibro</h2>
+
+<p>
+    @Html.ActionLink("Nuevo Libro", "CreateLibro")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdLibro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreLibro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Precio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaImpresion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EsNuevo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdLibro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreLibro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Precio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaImpresion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EsNuevo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", 
+                new { /* id=item.PrimaryKey */ }) |
+            
+            
+            @Html.ActionLink("Detalle", "DetailsLibro", 
+                new { id = item.IdLibro  }) |
+            
+
+            @Html.ActionLink("Delete", "Delete", 
+                new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

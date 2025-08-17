@@ -1,0 +1,31 @@
+# Archivos y carpetas temporales de compilación
+bin/
+obj/
+Debug/
+Release/
+
+# Configuración de Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Archivos de cache y logs
+*.cache
+*.log
+
+# Archivos de sistema
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+
+# Archivos de publicación
+*.publishsettings
+
+# Paquetes NuGet (se restauran con restore)
+*.nupkg
+packages/
+
+# Archivos de configuración generados
+launchSettings.json
